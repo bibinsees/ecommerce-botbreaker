@@ -1,0 +1,36 @@
+# Config for the editor llm used by create_modeldoc.py
+editor:
+  model: x-ai/grok-code-fast-1
+  #model: x-ai/grok-4
+  #model: openai/GPT-5.1-Codex-Max
+  #model: anthropic/claude-sonnet-4.5
+
+  # create_modeldoc.py
+  newmodel_prompt: system_prompts/editor/context_window_reformatting.md
+  reference_modeldoc: system_prompts/attacker/targets/GPT-Harmony/context_window.md
+
+  temperature: 0.3
+
+redteam:
+  model: none
+
+# Config for the target SalesAgent
+target:
+  model: none
+ 
+# Config for the LLM that provides search results from shopping_tools.py
+search:
+  model: none
+
+# Global duration limits for attack
+duration_limits:
+  max_turns: 500
+  max_retries: 3
+  max_attacker_context_tokens: 1000000
+  max_target_context_tokens: 128000
+  max_target_context_bytes: 20000
+
+# Optional output directories
+output:
+  logs_dir: logs # Logging disabled if omitted 
+  findings_dir: findings

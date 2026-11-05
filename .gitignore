@@ -1,0 +1,11 @@
+.env
+logs/
+findings/
+.venv/
+uv.lock
+__pycache__/
+.pytest_cache/
+
+# Local files that contain real API keys (never upload)
+.env.openai_backup
+easy_env_setup/
